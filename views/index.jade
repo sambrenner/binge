@@ -8,10 +8,12 @@ block scripts
       binge.init('binge_holder');
     });
 
-block content
-  h1= title
+block main_content
   article(id="binge_holder", data-audio-uri="/audio/interview_segment.mp3")
-    section(data-timecode="0")
+    header
+      h1 An Oral History of Alpha Beta
+
+    section(data-timecode="0", class="active")
       p <span class="speaker">Valerie Chen</span>It was hard to, like... each person you had to teach them how to flip the cart, and tell them "don't do anything yet" in the intro animation, 'cause they were trying to do shit.
       p <span class="speaker">Sarah Rothberg</span>Yeah, I feel mixed about that, how that ended up.
       p <span class="speaker">Sam Brenner</span>You mean, when you're walking to the store and you don't have control of the cart.
