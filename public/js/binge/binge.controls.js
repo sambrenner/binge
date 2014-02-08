@@ -3,10 +3,15 @@ var binge = (function(window, document, parent) {
 
   var _onPlayBtnClick = function(e) {
     e.preventDefault();
+
+    if(!parent.media.inited) parent.media.initPopcorn();
+
+    parent.media.play();
   };
 
   var _onPauseBtnClick = function(e) {
     e.preventDefault();
+    parent.media.pause();
   };
 
   var _onBackBtnClick = function(e) {
