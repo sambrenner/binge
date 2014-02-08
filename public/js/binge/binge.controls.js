@@ -1,4 +1,6 @@
 var binge = (function(window, document, parent) {
+  var _$controls;
+
   var _onPlayBtnClick = function(e) {
     e.preventDefault();
   };
@@ -15,33 +17,35 @@ var binge = (function(window, document, parent) {
     e.preventDefault();
   };
 
-  parent.buildControls = function() {
-    parent.controls = {};
+  parent.controls = {};
 
-    parent.controls.$playBtn = $('<a href="#">Play</a>').on('click', function(e) {
+  parent.controls.buildControls = function() {
+    parent.controls.controlBtns = {};
+
+    parent.controls.controlBtns.$playBtn = $('<a href="#">Play</a>').on('click', function(e) {
       _onPlayBtnClick(e);
     });
 
-    parent.controls.$pauseBtn = $('<a href="#">Pause</a>').on('click', function(e) {
+    parent.controls.controlBtns.$pauseBtn = $('<a href="#">Pause</a>').on('click', function(e) {
       _onPauseBtnClick(e);
     });
 
-    parent.controls.$backBtn = $('<a href="#">Back</a>').on('click', function(e) {
+    parent.controls.controlBtns.$backBtn = $('<a href="#">Back</a>').on('click', function(e) {
       _onBackBtnClick(e);
     });
 
-    parent.controls.$nextBtn = $('<a href="#">Next</a>').on('click', function(e) {
+    parent.controls.controlBtns.$nextBtn = $('<a href="#">Next</a>').on('click', function(e) {
       _onNextBtnClick(e);
     });
 
-    parent.$controls = $('<ul id="controls"></ul>');
+    _$controls = $('<ul id="controls"></ul>');
 
-    for (var control in parent.controls) {
-      parent.$controls.append(parent.controls[control].wrap("<li></li>").parent());
+    for (var control in parent.controls.controlBtns) {
+      _$controls.append(parent.controls.controlBtns[control].wrap("<li></li>").parent());
     };
 
-    parent.$header.append(parent.$controls);
-    parent.$controls.sticky({topSpacing: 0, className: 'stuck'});
+    parent.$header.append(_$controls);
+    _$controls.sticky({topSpacing: 0, className: 'stuck'});
   };
 
   return parent;
