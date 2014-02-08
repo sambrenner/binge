@@ -1,8 +1,15 @@
 var binge = (function(window, document, parent) {
-  parent.init = function(container_id) {
-    parent.$container = $('#' + container_id);
+  var _cacheSelectors = function() {
+    parent.$container = $('#' + parent.container_id);
+    parent.$header = parent.$container.find('header');
+  }
 
-    parent.parseStory();
+  parent.init = function(container_id) {
+    parent.container_id = container_id;
+
+    _cacheSelectors();
+
+    parent.buildControls();
   };
 
   return parent;

@@ -1,11 +1,17 @@
-body { color: #444; font-family: Times, 'Times New Roman', serif; padding-top: 30px; }
+body { color: #444; font-family: Times, 'Times New Roman', serif; padding-top: 10px; }
 h1 { font-size: 180%; font-weight: bold; }
+a, a:active, a:visited { color: #ff004e; }
 
 #main_content { margin: 0 auto; width: 30%; }
-#main_content article header { border-bottom: 1px solid #CCC; margin-bottom: 40px; padding-bottom: 10px; }
+#main_content article header { margin-bottom: 40px; }
 #main_content article p { margin-bottom: 10px; }
 #main_content article p:last-of-type { margin-bottom: 0; }
 #main_content article p span { font-weight: bold; margin-right: 6px; }
 #main_content article p span:after { content: ":"; }
 #main_content article section { margin-bottom: 25px; padding: 6px; }
 #main_content article section.active { background-color: #FFDDE8; }
+
+#controls { background-color: #FFF; border-bottom: 1px solid #CCC; padding: 6px 0 10px; width: 100%; }
+#controls li { display: inline-block; margin-right: 4px; }
+#controls li a { display: block; }
+.stuck #controls { width: 30%; }
