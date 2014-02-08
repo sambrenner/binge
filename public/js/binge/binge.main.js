@@ -9,7 +9,8 @@ var binge = (function(window, document, parent) {
 
     _cacheSelectors();
 
-    parent.buildControls();
+    parent.media.initAudio();
+    parent.controls.buildControls();
   };
 
   return parent;
