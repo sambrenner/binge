@@ -12,7 +12,7 @@ var binge = (function(window, document, parent) {
   parent.media.initPopcorn = function() {
     _popcorn = Popcorn("#binge_audio");
 
-    parent.$container.find('section').each(function() {
+    parent.$container.find('.binge-transcript').each(function() {
       var $this = $(this);
 
       _popcorn.code({
