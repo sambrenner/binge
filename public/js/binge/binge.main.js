@@ -1,6 +1,8 @@
 var binge = (function(window, document, parent) {
   var _cacheSelectors = function() {
-    parent.$container = $('#' + parent.container_id);
+    parent.$container = $('#binge_holder');
+    parent.$annotations = $('#binge_annotations');
+    parent.$transcript = $('#binge_transcript');
     parent.$header = parent.$container.find('header');
   }
 
@@ -11,6 +13,7 @@ var binge = (function(window, document, parent) {
 
     parent.media.initAudio();
     parent.controls.buildControls();
+    parent.parser.parseTranscript();
   };
 
   return parent;
