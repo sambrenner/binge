@@ -1,23 +1,26 @@
-body { color: #444; font-family: Times, 'Times New Roman', serif; padding: 1% 1% 0; }
-h1 { font-size: 180%; font-weight: bold; }
+body { color: #444; font-family: Times, 'Times New Roman', serif; padding: 1% 3% 0; }
+h1 { font-size: 200%; font-weight: bold; }
 a, a:active, a:visited { color: #ff004e; }
+p { margin-bottom: 16px; }
 
 #binge_holder header { margin-bottom: 40px; }
 
 #binge_transcript { float: left; position: relative; width: 40%; }
-#binge_transcript p { margin-bottom: 10px; }
+#binge_transcript p { font-size: 140%; line-height: 120%; }
 #binge_transcript p:last-of-type { margin-bottom: 0; }
 #binge_transcript p span { font-weight: bold; margin-right: 6px; }
 #binge_transcript p span:after { content: ":"; }
-#binge_transcript section { left: -1%; margin-bottom: 25px; padding: 1%; position: relative; width: 102%; }
+#binge_transcript section { left: -3%; margin-bottom: 30px; padding: 3%; position: relative; width: 106%; }
 #binge_transcript section.active { background-color: #FFDDE8; }
 
-#binge_annotations { float: right; position: relative; width: 58%; }
+#binge_annotations { float: right; position: relative; width: 54%; }
 #binge_annotations iframe { border: 1px solid #CCC; }
+#binge_annotations p { font-size: 120%; line-height: 115%; }
+#binge_annotations section { background-color: #FFF; }
 
 #binge_supplements { display: none; }
 
-#controls { background-color: #FFF; border-bottom: 1px solid #CCC; padding: 6px 0 10px; width: 100%; z-index: 2; }
+#controls { background-color: #FFF; border-bottom: 1px solid #CCC; padding: 14px 0; width: 100%; z-index: 2; }
 #controls li { display: inline-block; margin-right: 4px; }
 #controls li a { display: block; }
-.stuck #controls { width: 98%; }
+.stuck #controls { width: 94%; }
