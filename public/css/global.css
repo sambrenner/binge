@@ -5,7 +5,7 @@ p { margin-bottom: 16px; }
 
 #binge_holder header { margin-bottom: 40px; }
 
-#binge_transcript { float: left; position: relative; width: 40%; }
+#binge_transcript { float: left; position: relative; width: 40%; z-index: 2; }
 #binge_transcript p { font-size: 140%; line-height: 120%; }
 #binge_transcript p:last-of-type { margin-bottom: 0; }
 #binge_transcript p span { font-weight: bold; margin-right: 6px; }
@@ -18,9 +18,12 @@ p { margin-bottom: 16px; }
 #binge_annotations p { font-size: 120%; line-height: 115%; }
 #binge_annotations section { background-color: #FFF; }
 
+#binge_annotations iframe:before,
+#binge_annotations section:before { border-top: 3px solid #CCC; content: ""; display: block; left: -65px; position: absolute; top: 12px; width: 60px;}
+
 #binge_supplements { display: none; }
 
-#controls { background-color: #FFF; border-bottom: 1px solid #CCC; padding: 14px 0; width: 100%; z-index: 2; }
+#controls { background-color: #FFF; border-bottom: 1px solid #CCC; padding: 14px 0; width: 100%; z-index: 3; }
 #controls li { display: inline-block; margin-right: 4px; }
 #controls li a { display: block; }
 .stuck #controls { width: 94%; }
